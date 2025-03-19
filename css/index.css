@@ -8,6 +8,7 @@ body {
 
 /* 네비게이션 */
 .nav {
+    z-index: 9999;
     position: fixed;
     width: 100%;
     display: flex;
@@ -19,7 +20,7 @@ body {
     display: flex;
     height: fit-content;
     padding: 1.2rem 0.8rem;
-    background-color: rgb(253 250 246 / 80%);
+    background-color: rgb(253 250 246 / 100%);
     border-bottom-left-radius: 25px;
     box-shadow: -3px 3px 15px rgba(0, 0, 0, 0.12), 0 3px 15px rgba(0, 0, 0, 0.24);
 }
