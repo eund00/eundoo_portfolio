@@ -30,14 +30,17 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <ul class="nva_wrap">
+    <nav class="nav click">
+        <ul class="nav_wrap">
             <li><a href="#cont_intro">🍀</a></li>
             <li><a href="#cont_history">📗</a></li>
             <li><a href="#cont_license">✨</a></li>
             <li><a href="#cont_skill">🌳</a></li>
             <li><a href="#cont_active">🧩</a></li>
         </ul>
+        <a href="#none" class="nav_btn">
+            <i class="fa-solid fa-arrow-down"></i>
+        </a>
     </nav>
     <div class="cont_intro" id="cont_intro">
         <div class="intro_inner">
@@ -52,12 +55,17 @@
 
             <div class="intro_description">
                 <p>
-                    웹에이전시와 교육 콘텐츠 업계에서 웹퍼블리셔로 일하며<br>
-                    <span>기획,디자인과 퍼블리싱을 잇는 가교 역할</span>을 수행하였습니다.<br>
+                    <span><i>웹에이전시와 교육 콘텐츠 업계에서</i> <i>웹퍼블리셔로 일하며</i></span><br>
+                    <span><i class="g_color">기획,디자인과 퍼블리싱을 잇는</i><i> 가교 역할 을 수행하였습니다.</i></span><br>
                 </p>
                 <p>
-                    다양한 UI/UX 최적화와 반응형 웹 구현 경험을 토대로<br>
-                    <span>원활한 협업</span>과 <span>효율적인 퍼블리싱</span>을 강점으로 삼고 있습니다.
+                    <span>
+                        <i>다양한 UI/UX 최적화와</i> <i>반응형 웹 구현 경험을 토대로</i>
+                    </span><br>
+                    <span>
+                        <span><i class="g_color">원활한 협업</i><i>과</i></span>
+                        <span><i class="g_color">효율적인 퍼블리싱</i><i>을 강점으로 삼고 있습니다.</i></span>
+                    </span>
                 </p>
             </div>
         </div>
@@ -85,7 +93,10 @@
                 <li class="histroy_list">
                     <div class="history_box">
                         <p class="history_name">그린컴퓨터아카데미</p>
-                        <p class="history_des">UI/UX 반응형 웹디자인&웹퍼블리셔(디자인&코딩) 양성과정</p>
+                        <p class="history_des">
+                            <span>UI/UX 반응형 웹디자인&웹퍼블리셔</span>
+                            <span>(디자인&코딩) 양성과정</span>
+                        </p>
                     </div>
                     <p class="history_duration">2023.02 ~ 2023.07</p>
                 </li>
@@ -202,12 +213,12 @@
                     </a>
                 </li>
                 <li class="active_list">
-                    <a href="http://www.goodson.co.kr/" target="_blank">
-                        <img src="./img/folio_goodson.png" alt="">
+                    <a href="https://hightachi.com/" target="_blank">
+                        <img src="./img/folio_hi1.png" alt="">
                         <div class="active_hover">
                             <div class="twrap">
-                                <p class="tit">굿손</p>
-                                <p class="txt">유지보수 퍼블리싱 담당</p>
+                                <p class="tit">하이타치</p>
+                                <p class="txt">신규 홈페이지 퍼블리싱 담당</p>
                             </div>
                         </div>
                     </a>
@@ -224,11 +235,22 @@
                     </a>
                 </li>
                 <li class="active_list">
-                    <a href="https://hightachi.com/" target="_blank">
-                        <img src="./img/folio_hi1.png" alt="">
+                    <a href="https://hwarak.com/" target="_blank">
+                        <img src="./img/folio_hwarack.png" alt="">
                         <div class="active_hover">
                             <div class="twrap">
-                                <p class="tit">하이타치</p>
+                                <p class="tit">화락</p>
+                                <p class="txt">신규 홈페이지 퍼블리싱 담당</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="active_list">
+                    <a href="https://www.matchrang.com/" target="_blank">
+                        <img src="./img/folio_matchrang.png" alt="">
+                        <div class="active_hover">
+                            <div class="twrap">
+                                <p class="tit">매취랑</p>
                                 <p class="txt">신규 홈페이지 퍼블리싱 담당</p>
                             </div>
                         </div>
@@ -246,17 +268,6 @@
                     </a>
                 </li>
                 <li class="active_list">
-                    <a href="https://hwarak.com/" target="_blank">
-                        <img src="./img/folio_hwarack.png" alt="">
-                        <div class="active_hover">
-                            <div class="twrap">
-                                <p class="tit">화락</p>
-                                <p class="txt">신규 홈페이지 퍼블리싱 담당</p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="active_list">
                     <a href="https://www.roadrockbeer.com/" target="_blank">
                         <img src="./img/folio_roadrock.png" alt="">
                         <div class="active_hover">
@@ -267,14 +278,52 @@
                         </div>
                     </a>
                 </li>
+                <li class="active_list">
+                    <a href="#none" class="big_alert">
+                        <img src="./img/bf_1.png" alt="">
+                        <div class="active_hover">
+                            <div class="twrap">
+                                <p class="tit">동양북스 중국어 고등</p>
+                                <p class="txt">퍼블리싱 양산 담당</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="active_list">
+                    <a href="#none" class="big_alert">
+                        <img src="./img/bf_2.png" alt="">
+                        <div class="active_hover">
+                            <div class="twrap">
+                                <p class="tit">동양북스 중국어 중등</p>
+                                <p class="txt">퍼블리싱 양산 담당</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="active_list">
+                    <a href="#none" class="big_alert">
+                        <img src="./img/bf_3.png" alt="">
+                        <div class="active_hover">
+                            <div class="twrap">
+                                <p class="tit">YBM 음악 초3</p>
+                                <p class="txt">퍼블리싱 양산 담당</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
     <div class="cont_bye">
         <div class="bye_inner">
             <p class="bye_title">
-                새로운 가능성을 함께 만들어갈 준비가 되어 있습니다.<br>
-                협업을 원하신다면, 아래 이메일로 언제든 연락 주세요.<br>
+                <span class="txt_block">
+                    <i>새로운 가능성을 함께 만들어갈</i> <i>준비가 되어 있습니다.</i>
+                </span>
+                <br>
+                <span class="txt_block">
+                    <i>협업을 원하신다면,</i> <i>아래 이메일로 언제든 연락 주세요.</i>
+                </span>
             </p>
             <i class="fa-solid fa-envelope-open-text bye_icon"></i>
             <a class="bye_mail" href="mailto:leeeunj00@naver.com">

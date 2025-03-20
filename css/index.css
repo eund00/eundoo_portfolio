@@ -36,7 +36,38 @@ body {
 
 .nav ul li a {
     position: relative;
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+.nav_btn {
+    position: absolute;
+    border: 1px solid #4f772d;
+    text-align: center;
+    border-radius: 50%;
+    color: #4f772d;
+    font-size: 2rem;
+    top: 15%;
+    right: 40%;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    transform: rotate(90deg) scaleX(-1);
+}
+
+.nav_btn i {
+    transform: rotate(180deg);
+}
+
+.nav.click ul {
+    top: -1000px;
+}
+
+.nav.click .nav_btn {
+    right: 1%
+}
+
+.nav.click .nav_btn i {
+    transform: rotate(0deg);
 }
 
 
@@ -84,13 +115,13 @@ body {
 }
 
 .intro_description p {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     line-height: 1.5;
     font-weight: 500;
     color: #333;
 }
 
-.intro_description p span {
+.intro_description p .g_color {
     font-weight: 500;
     background-color: #4f772d;
     color: #fff;
@@ -99,7 +130,7 @@ body {
 
 /* 히스토리 */
 .cont_history {
-    padding: 10rem 0 0;
+    padding: 10rem 1rem 0;
     background: linear-gradient(#99BC85, #ffffff00);
 }
 
@@ -149,7 +180,7 @@ body {
 
 /* 자격증 */
 .cont_license {
-    padding: 10rem 0 0;
+    padding: 10rem 1rem 0;
 }
 
 
@@ -167,7 +198,7 @@ body {
 
 /* 스킬 */
 .cont_skill {
-    padding: 10rem 0 0;
+    padding: 10rem 1rem 0;
 }
 
 
@@ -192,15 +223,13 @@ body {
     width: 100%;
 }
 
-.cont_skill .swiper-slide {}
-
 .cont_skill .swiper-slide img {
     width: 100%;
 }
 
 /* 활동 */
 .cont_active {
-    padding: 10rem 0 0;
+    padding: 10rem 1rem 0;
 }
 
 .active_inner {
@@ -218,7 +247,6 @@ body {
 .active_wrap {
     max-width: 950px;
     margin: 2rem auto 0;
-    padding-left: 1.2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 3rem;
@@ -226,7 +254,7 @@ body {
 
 .active_list {
     position: relative;
-    max-width: 500px;
+    max-width: calc(100vw / 2.5);
     margin: 0 auto;
     border-radius: 25px;
     overflow: hidden;
@@ -276,7 +304,7 @@ body {
 
 /* bye */
 .cont_bye {
-    padding: 10rem 0;
+    padding: 10rem 1rem;
 }
 
 .bye_inner {
@@ -325,4 +353,253 @@ body {
     font-size: 2rem;
     color: #4f772d;
     font-weight: 900;
+    transition: all 2s;
+}
+
+.bye_mail:hover {
+    font-size: 2.2rem;
+}
+
+/* 반응형 */
+@media (max-width: 375px) {
+    .intro_description p {
+        font-size: 1.2rem !important
+    }
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+
+    /* intro */
+    .intro_title {
+        font-size: 3rem;
+    }
+
+    .intro_text {
+        font-size: 2.5rem;
+    }
+
+    .intro_description p {
+        font-size: 1.5rem;
+    }
+
+    .intro_description p i {
+        display: inline-block;
+    }
+
+    .nav_wrap {
+        padding: 0 !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        padding: 1vh;
+    }
+
+    .intro_description {
+        margin-top: 1.5rem;
+    }
+
+    .intro_title {
+        margin-top: 1rem;
+    }
+
+    /* history */
+    .cont_history {
+        display: flex;
+        align-items: center;
+    }
+
+    .history_box {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .history_duration {
+        padding: 0;
+    }
+
+    .histroy_list:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    .history_name {
+        font-size: 1.5rem;
+    }
+
+    .history_des {
+        font-size: 1.3rem;
+    }
+
+    /* skill */
+    .cont_skill {
+        padding: 5rem 1rem 0;
+    }
+
+    /* active */
+    .cont_active {
+        padding: 5rem 1rem 0;
+    }
+
+    .active_list .active_hover {
+        opacity: 1;
+        padding: 0.5rem 0.5rem 1rem;
+    }
+
+    .active_list .active_hover .twrap .tit {
+        font-size: 1.5rem;
+    }
+
+    .active_list .active_hover .twrap .txt {
+        font-size: 0.8rem;
+        padding-top: 0;
+    }
+
+    /* bye */
+    .bye_title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .txt_block {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* 테블릿 세로 */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* nav */
+    .nav_btn {
+        right: 27.5rem;
+        top: 15%;
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 2rem;
+        transform: rotate(270deg) scaleY(-1);
+    }
+
+    .nav ul {
+        padding: 1rem 0.5rem;
+    }
+
+    .nav ul li {
+        padding: 0 2vh;
+    }
+
+    .nav ul li a {
+        font-size: 2rem;
+    }
+
+    .nav.click .nav_btn {
+        left: auto;
+        right: 0.5rem;
+    }
+
+    /* intro */
+    .intro_description p {
+        font-size: 1.5rem;
+    }
+
+    /* history */
+    .history_box {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .history_title {
+        font-size: 3rem;
+    }
+
+    .history_des {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.8rem;
+    }
+
+    .histroy_list:not(:last-child) {
+        margin-bottom: 2.5rem;
+    }
+
+    .history_duration {
+        font-size: 1.5rem;
+    }
+
+    .history_name {
+        font-size: 2rem;
+    }
+
+    /* active */
+    .active_list .active_hover {
+        opacity: 1;
+        padding: 0rem 1rem 1.5rem;
+    }
+
+    .active_list .active_hover .twrap .tit {
+        font-size: 2.5rem;
+    }
+
+    .active_list .active_hover .twrap .txt {
+        font-size: 1.5rem;
+    }
+
+    /* bye */
+    .bye_title {
+        text-align: center;
+    }
+
+    .txt_block {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/* 테블릿 가로 */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /* nav */
+    .nav_btn {
+        right: 27.5rem;
+        top: 15%;
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 2rem;
+        transform: rotate(270deg) scaleY(-1);
+    }
+
+    .nav ul {
+        padding: 1rem 0.5rem;
+    }
+
+    .nav ul li {
+        padding: 0 2vh;
+    }
+
+    .nav ul li a {
+        font-size: 2rem;
+    }
+
+    .nav.click .nav_btn {
+        left: auto;
+        right: 0.5rem;
+    }
+
+    /* active */
+    .active_list .active_hover {
+        opacity: 1;
+        padding: 0rem 1rem 1.5rem;
+    }
+
+    .active_list .active_hover .twrap .tit {
+        font-size: 2.5rem;
+    }
+
+    .active_list .active_hover .twrap .txt {
+        font-size: 1.5rem;
+    }
 }
