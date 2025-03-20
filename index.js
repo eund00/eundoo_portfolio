@@ -1,8 +1,29 @@
 $(document).ready(function () {
 
+    // .nav_btn 클릭시 .nav에 .click 클래스 추가
     document.querySelector(".nav_btn").addEventListener("click", function () {
         document.querySelector(".nav").classList.toggle("click");
     });
+
+    // .nav_wrap 요소 선택
+    const navWrap = document.querySelector('.nav_wrap');
+    // .nav_btn 요소 선택
+    const navBtn = document.querySelector('.nav_btn');
+
+    // 너비를 측정하고 .nav_btn의 right 속성을 업데이트하는 함수
+    function updateNavWidth() {
+        const navWidth = navWrap.offsetWidth; // .nav_wrap의 너비를 가져옴
+        console.log('Current .nav_wrap width:', navWidth);
+
+        // .nav_btn의 right 속성 업데이트
+        navBtn.style.right = `${navWidth + 10}px`;
+    }
+
+    // 초기 너비 측정 및 right 속성 설정
+    updateNavWidth();
+
+    // 윈도우 크기 변경 시 너비 측정 및 right 속성 설정
+    window.addEventListener('resize', updateNavWidth);
 
     const $text = document.querySelector("#typing");
 
@@ -94,5 +115,49 @@ $(document).ready(function () {
             alert("교육전자저작물은 저작권 이슈로 링크이동이 불가합니다. 😢");
         });
     });
+
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.cont_intro',
+            start: 'top center'
+        }
+    })
+        .fromTo('.intro_img', { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 1 })
+        .fromTo('.intro_title span', { left: '-50px', opacity: 0 }, { left: 0, opacity: 1, duration: .3, stagger: 0.3, delay: -0.5 })
+        .fromTo('.intro_text', { top: '50px', opacity: 0 }, { top: 0, opacity: 1, duration: .3, stagger: 0.3, delay: 0.3 })
+        .fromTo('.intro_description p', { top: '50px', opacity: 0 }, { top: 0, opacity: 1, duration: .5, stagger: 0.8, delay: .3 })
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.cont_history',
+            start: 'top center'
+        }
+    })
+        .fromTo('.histroy_list', { top: '50px', opacity: 0 }, { top: 0, opacity: 1, duration: .5, stagger: 0.8 })
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.license_inner',
+            start: 'top center'
+        }
+    })
+        .fromTo('.license_list', { top: '50px', opacity: 0 }, { top: 0, opacity: 1, duration: .5, stagger: 0.8 })
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.active_inner',
+            start: 'top center'
+        }
+    })
+        .fromTo('.active_list', { top: '50px', opacity: 0 }, { top: 0, opacity: 1, duration: .5, stagger: 0.3 })
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.cont_bye',
+            start: 'top center'
+        }
+    })
+        .fromTo('.bye_title .txt_block', { width: 0 }, { width: '100%', duration: 2, stagger: 1.8 })
 
 });
