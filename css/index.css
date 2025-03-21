@@ -372,6 +372,7 @@ body {
 }
 
 .bye_title .txt_block {
+    position: relative;
     width: 100%;
     overflow: hidden;
     display: inline-block;
@@ -408,7 +409,8 @@ body {
     font-size: 2rem;
     color: #4f772d;
     font-weight: 900;
-    transition: all 2s;
+    /* transition: all 2s; */
+    opacity: 0;
 }
 
 .bye_mail:hover {
@@ -550,7 +552,7 @@ body {
     }
 
     .txt_block {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
     }
 }
@@ -662,7 +664,7 @@ body {
     }
 
     .txt_block {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
     }
 
@@ -706,5 +708,10 @@ body {
 
     .active_list .active_hover .twrap .txt {
         font-size: 1.5rem;
+    }
+
+    /* bye */
+    .txt_block {
+        display: inline-block !important;
     }
 }

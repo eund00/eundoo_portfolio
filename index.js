@@ -158,6 +158,8 @@ $(document).ready(function () {
             start: 'top center'
         }
     })
-        .fromTo('.bye_title .txt_block', { width: 0 }, { width: '100%', duration: 2, stagger: 1.8 })
+        .fromTo('.bye_title .txt_block', { top: '120px', opacity: 0 }, { top: 0, opacity: 1, duration: 1, stagger: .8 })
+        .fromTo('.bye_icon', { opacity: 0 }, { opacity: 1, duration: 1 })
+        .to('.bye_mail', { opacity: 1, scale: 1, duration: 1, delay: -.5 })
 
 });
